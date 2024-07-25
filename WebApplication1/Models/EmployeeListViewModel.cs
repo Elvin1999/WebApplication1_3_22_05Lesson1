@@ -6,6 +6,6 @@ namespace WebApplication1.Models
     public class EmployeeListViewModel
     {
         public List<Employee> Employees { get; set; }
-        public List<string> Cities { get; set; }
+        public List<string> Cities { get; set; }=new List<string>();
     }
 }

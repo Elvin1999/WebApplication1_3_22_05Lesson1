@@ -1,0 +1,14 @@
+﻿@model EmployeeListViewModel
+
+<section class="container bg-primary">
+    @foreach(var item in Model.Employees)
+    {
+        <section style="width:40%;margin:auto">
+            <h2>Name : @item.Firstname</h2>
+            <h2>Surname : @item.Lastname</h2>
+            <a>Delete Employee</a>
+        </section>
+    }
+</section>
+
+<a asp-controller="Employee" asp-action="Add">Add New Employee</a>
