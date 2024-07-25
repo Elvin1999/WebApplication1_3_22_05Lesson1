@@ -6,9 +6,11 @@
         <section style="width:40%;margin:auto">
             <h2>Name : @item.Firstname</h2>
             <h2>Surname : @item.Lastname</h2>
-            <a>Delete Employee</a>
+            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id">Delete Employee</a>
         </section>
     }
 </section>
 
+<h1>From custom tag helper</h1>
+<employee-list count="2" sort="a-z"></employee-list>
 <a asp-controller="Employee" asp-action="Add">Add New Employee</a>

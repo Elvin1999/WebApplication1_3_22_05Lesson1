@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using WebApplication1.Entities;
 using WebApplication1.Models;
 
@@ -63,6 +64,17 @@ namespace WebApplication1.Controllers
             {
                 return View(vm);
             }
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var item = Employees.SingleOrDefault(e => e.Id == id);
+            if (item != null)
+            {
+                Employees.Remove(item);
+            }
+            return RedirectToAction("Index");
         }
     }
 }
