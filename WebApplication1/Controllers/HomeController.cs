@@ -23,6 +23,7 @@ namespace WebApplication1.Controllers
         {
             ViewData["Message"] = "Hello From ViewData";
             TempData["Alert"] = "Hello From TempData";
+            ViewBag.Alert = "Hello From TempData";
             return View();
         }
 
@@ -36,6 +37,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
         public IActionResult Index3()
         {
             return NotFound();
