@@ -21,14 +21,21 @@ namespace WebApplication1.Controllers
          
         public IActionResult Index()
         {
+            ViewData["Message"] = "Hello From ViewData";
+            TempData["Alert"] = "Hello From TempData";
             return View();
         }
 
+        public IActionResult Test2()
+        {
+            ViewData["Message"] = "Hello From ViewData";
+            TempData["Alert"] = "Hello From TempData";
+            return RedirectToAction("Index2");
+        }
         public IActionResult Index2()
         {
-            return Ok();
+            return View();
         }
-
         public IActionResult Index3()
         {
             return NotFound();
